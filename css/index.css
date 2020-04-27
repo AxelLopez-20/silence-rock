@@ -71,3 +71,10 @@ body{
       margin: 0;
     }
   }
+table{
+  border: 1px solid black;
+}
+iframe{
+  width: 500px;
+  height: 500px;
+}
