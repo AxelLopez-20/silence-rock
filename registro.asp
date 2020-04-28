@@ -3,11 +3,10 @@
 <%@ LANGUAGE="VBSCRIPT" %>
 <%
 option explicit
-Dim conn,nom,email,coments,city,nac
+Dim conn,nom,email,city,nac
 
 nom=Request.Form("nombre")
 email=request.Form("correo")
-coments=Request.Form("coms")
 city= Request.From("ciudad")
 nac= Request.From("nacimiento")
 
