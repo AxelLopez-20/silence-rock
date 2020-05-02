@@ -11,7 +11,8 @@ city= Request.From("ciudad")
 nac= Request.From("nacimiento")
 
 set conn=Server.CreateObject("ADODB.connection")
-Conn.open "provider=Microsoft.Jet.OLEDB.4.0;Data Source=registro.mdb"
+Set Tabla = Server.CreateObject("ADODB.Recordset")
+Conn.Open "Driver={Microsoft Access Driver (*.mdb)}; " & "Dbq=" & Server.MapPath("registro.mdb")
 Conn.execute "INSERT INTO datoscliente(nombre,correo,ciudad,nacimiento) values('"& nom & "','"& email & "','"& city & "','"& nac &"')"
 Conn.close
 set conn=nothing
